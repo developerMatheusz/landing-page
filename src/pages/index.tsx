@@ -4,36 +4,39 @@ export default function Index() {
   return (
     <div className="flex w-full flex-col h-full">
       <div className="w-full h-full custom-background pb-6">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between bg-[#343236] md:bg-transparent">
           <div className="w-full text-white flex items-center gap-8">
-            <div className="my-2 ml-4">
+            <div className="md:my-2 my-4 ml-4">
               <img src="/logo.png" className="w-24 h-20" />
             </div>
-            <div className="h-16 border-r-2 border-gray-400" />
-            <div className="gap-8 flex items-center">
-              <Link href="/" className="font-bold hover:text-gray-300">
+            <div className="md:h-16 md:border-r-2 md:border-gray-400" />
+            <div className="md:block hidden flex items-center gap-8 z-50">
+              <Link href="/" className="font-bold mr-8 hover:text-gray-300">
                 Home
               </Link>
-              <Link href="/" className="font-bold hover:text-gray-300">
+              <Link href="/" className="font-bold mr-8 hover:text-gray-300">
                 Features
               </Link>
-              <Link href="/" className="font-bold hover:text-gray-300">
+              <Link href="/" className="font-bold mr-8 hover:text-gray-300">
                 Blog
               </Link>
-              <Link href="/" className="font-bold hover:text-gray-300">
+              <Link href="/" className="font-bold mr-8 hover:text-gray-300">
                 Contato
               </Link>
             </div>
           </div>
-          <div className="w-44 mr-4">
+          <div className="w-44 mr-4 md:block hidden">
             <button className="bg-[#343236] text-white px-4 py-2 shadow-xl rounded font-semibold text-lg">
               Baixar grátis
             </button>
           </div>
+          <div className="w-44 md:hidden -mr-14 cursor-pointer">
+            <img src="/hamburguer.png" alt="" />
+          </div>
         </div>
-        <div className="w-full flex items-center">
-          <div className="w-3/5 ml-44 mt-20">
-            <div className="flex items-center gap-2">
+        <div className="w-full flex-col md:flex-row flex items-center">
+          <div className="md:w-3/5 w-full md:ml-44 mt-10 md:mt-20">
+            <div className="flex items-center ml-8 md:ml-0 gap-2">
               <div className="inline-block rounded-full bg-[#343236] text-white p-2">
                 <div className="flex items-center gap-2 font-light">
                   <img src="/round.png" alt="" className="w-8 h-8" />
@@ -42,7 +45,7 @@ export default function Index() {
               </div>
               <img src="/point.png" alt="" className="w-6 -ml-6 -mt-9" />
             </div>
-            <div className="flex flex-col max-w-xl mt-6">
+            <div className="flex flex-col max-w-xl ml-8 md:ml-0 mt-6">
               <span className="text-white font-extrabold text-4xl text-left">
                 DOMINO O JOGO COM UM TIME CAMPEÃO!
               </span>
@@ -51,24 +54,20 @@ export default function Index() {
                 e análises de desempenho em tempo real para seu time de futebol.
               </span>
             </div>
-            <div className="flex items-center gap-8 mt-10">
-              <div className="bg-[#343236] px-4 py-2 rounded-2xl flex items-center justify-center gap-2">
-                <img src="/google_play.png" alt="" className="w-10 h-10" />
-                <span className="text-white flex flex-col items-start justify-start">
-                  <p className="font-light text-left">GET IN ON</p>
-                  <p className="font-bold text-xl text-left">Google Play</p>
-                </span>
-              </div>
-              <div className="bg-[#343236] px-4 py-2 rounded-2xl flex items-center justify-center gap-2">
-                <img src="/apple.png" alt="" className="w-10 h-12" />
-                <span className="text-white flex flex-col items-start justify-start">
-                  <p className="font-light text-left">Download on the</p>
-                  <p className="font-bold text-xl text-left">App Store</p>
-                </span>
-              </div>
+            <div className="flex items-center ml-8 md:ml-0 gap-8 mt-10">
+              <Link href="https://play.google.com/store" target="_blank">
+                <img src="/playstore.png" alt="" className="w-56" />
+              </Link>
+              <Link href="https://play.google.com/store" target="_blank">
+                <img src="/appstore.png" alt="" className="w-56" />
+              </Link>
             </div>
-            <div className="flex flex-col items-center justify-center">
-              <img src="/dotted.png" alt="" className="w-14 h-14" />
+            <div className="flex flex-col items-center ml-8 md:ml-0 justify-center">
+              <img
+                src="/dotted.png"
+                alt=""
+                className="w-14 h-14 ml-48 md:-ml-20"
+              />
               <div className="w-full -mt-8 -mr-10">
                 <img src="/group_people.png" alt="" className="h-16" />
               </div>
@@ -77,8 +76,8 @@ export default function Index() {
               </div>
             </div>
           </div>
-          <div className="w-2/5 flex items-center justify-center ml-10 mr-20">
-            <img src="/iphone.png" alt="" className="h-96 z-50 absolute" />
+          <div className="w-2/5 flex items-center justify-center ml-10 my-20 md:my-0 mr-20">
+            <img src="/iphone.png" alt="" className="h-96 z-50 md:absolute" />
             <img
               src="/x.png"
               alt=""
@@ -88,19 +87,19 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="flex items-center h-full bg-[#343236] justify-between">
-        <div className="w-1/2 h-full">
+      <div className="flex items-center flex-col md:flex-row h-full bg-[#343236] justify-between">
+        <div className="md:w-1/2 w-full h-full">
           <img src="/player.png" alt="" className="bg-cover" />
         </div>
-        <div className="w-1/2 h-screen flex-col ml-10">
-          <div className="h-full w-full">
-            <h1 className="text-green-600 text-3xl font-light">
+        <div className="md:w-1/2 w-full md:h-screen flex-col md:ml-10 pl-10">
+          <div className="h-full w-full mt-10 md:mt-0">
+            <h1 className="text-green-600 md:text-3xl text-2xl font-light">
               Junte-se a nós
             </h1>
-            <h2 className="my-4 text-6xl font-bold text-white">
+            <h2 className="my-4 md:text-6xl text-4xl font-bold text-white">
               A VIDA É UM JOGO E PRECISAMOS DE GOLS
             </h2>
-            <div className="w-[650px]">
+            <div className="md:w-[650px] w-[400px]">
               <span className="font-semibold text-gray-300 text-white text-lg">
                 Descubra o app perfeito para apaixonados por futebol!
                 <br /> Mantenha seus jogos organizados, registre os resultados
