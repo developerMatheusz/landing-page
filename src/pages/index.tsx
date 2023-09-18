@@ -78,13 +78,21 @@ export default function Index() {
             </div>
           </div>
           <div className="md:w-2/5 w-full flex items-center justify-center md:ml-10 my-20 md:my-0 pr-20">
-            <img src="/iphone.png" alt="" className="h-96 z-50 md:absolute object-contain" />
+            <img
+              src="/iphone.png"
+              alt=""
+              className="h-96 z-50 md:absolute object-contain"
+            />
             <img
               src="/x.png"
               alt=""
               className="-mb-44 md:-ml-60 -ml-40 h-16 md:h-28 z-10 absolute object-contain"
             />
-            <img src="/points.png" alt="" className="-mr-60 z-10 absolute object-contain" />
+            <img
+              src="/points.png"
+              alt=""
+              className="-mr-60 z-10 absolute object-contain"
+            />
           </div>
         </div>
       </S.ContainerHeader>
@@ -136,7 +144,7 @@ export default function Index() {
       </div>
       <div className="flex flex-col md:flex-row items-center h-full bg-[#343236] gap-20 justify-between p-20">
         <div className="md:w-1/2 h-full hidden md:block">
-        <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center">
+          <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center">
             <h1 className="text-4xl font-bold text-white text-center md:text-right">
               BANNERS
               <br />
@@ -170,7 +178,7 @@ export default function Index() {
           </div>
         </div>
         <div className="md:w-1/2 h-full md:hidden">
-        <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center md:mt-24">
+          <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center md:mt-24">
             <h1 className="text-3xl font-bold text-white text-center md:text-right">
               BANNERS
               <br />
@@ -396,7 +404,11 @@ export default function Index() {
           <img src="/playstore.png" alt="" className="md:pl-0 pl-4" />
         </Link>
         <Link href="https://play.google.com/store" target="_blank">
-          <img src="/appstore.png" alt="" className="md:pl-0 pl-4 pr-4 md:pr-0" />
+          <img
+            src="/appstore.png"
+            alt=""
+            className="md:pl-0 pl-4 pr-4 md:pr-0"
+          />
         </Link>
       </div>
       <div className="flex w-full bg-[#343236]">
@@ -427,12 +439,20 @@ export default function Index() {
             <div className="flex items-center justify-end">
               <div className="bg-[#42BD3D] rounded-lg p-2 mr-4">
                 <Link href="https://www.instagram.com/" target="_blank">
-                  <img src="/facebook-circle-fill.png" alt="" className="w-6 md:w-10" />
+                  <img
+                    src="/facebook-circle-fill.png"
+                    alt=""
+                    className="w-6 md:w-10"
+                  />
                 </Link>
               </div>
               <div className="bg-[#42BD3D] rounded-lg p-2 mr-4">
                 <Link href="https://www.instagram.com/" target="_blank">
-                  <img src="/instagram-fill.png" alt="" className="w-6 md:w-10" />
+                  <img
+                    src="/instagram-fill.png"
+                    alt=""
+                    className="w-6 md:w-10"
+                  />
                 </Link>
               </div>
               <div className="bg-[#42BD3D] rounded-lg p-2 md:mr-8 mr-4">
