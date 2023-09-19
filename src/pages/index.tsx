@@ -8,7 +8,7 @@ export default function Index() {
         <S.ContainerNavbar>
           <S.NavbarPrimary>
             <S.ContainerLogo>
-              <S.Logo src="/logo.png" />
+              <S.Logo src="/images/logo.svg" />
             </S.ContainerLogo>
             <S.BorderRightGray />
             <div className="md:block hidden flex items-center gap-8 z-50">
@@ -35,7 +35,7 @@ export default function Index() {
             </button>
           </div>
           <div className="w-44 flex items-center justify-center md:hidden cursor-pointer">
-            <img src="/hamburguer.png" alt="" />
+            <img src="/images/hamburguer.svg" alt="" />
           </div>
         </S.ContainerNavbar>
         <div className="w-full flex-col md:flex-row flex items-center">
@@ -43,11 +43,13 @@ export default function Index() {
             <div className="flex items-center ml-8 md:ml-0 gap-2">
               <div className="inline-block rounded-full bg-[#343236] text-white p-2">
                 <div className="flex items-center gap-2 font-light">
-                  <img src="/round.png" alt="" className="w-8 h-8" />
+                  <div className="rounded-full bg-green-300/25 p-0.5">
+                    <img src="/images/round.svg" alt="" className="w-8 h-8" />
+                  </div>
                   Team Management App
                 </div>
               </div>
-              <img src="/point.png" alt="" className="w-6 -ml-6 -mt-9" />
+              <img src="/images/point.svg" alt="" className="w-6 -ml-6 -mt-9" />
             </div>
             <div className="flex flex-col max-w-xl ml-8 md:ml-0 mt-6">
               <span className="text-white font-extrabold md:text-4xl text-2xl text-left">
@@ -60,41 +62,32 @@ export default function Index() {
             </div>
             <div className="flex items-center justify-center md:justify-start mt-10 md:ml-10">
               <Link href="https://play.google.com/store" target="_blank">
-                <img src="/playstore.png" alt="" className="w-44 h-14" />
+                <img
+                  src="/images/googleplay.svg"
+                  alt=""
+                  className="w-44 h-14"
+                />
               </Link>
               <Link href="https://play.google.com/store" target="_blank">
-                <img src="/appstore.png" alt="" className="w-44 h-14" />
+                <img src="/images/appstore.svg" alt="" className="w-44 h-14" />
               </Link>
             </div>
             <div className="flex justify-start items-start md:ml-0 my-10">
-              <div className="flex flex-col items-center justify-center">
+              <div className="flex flex-col items-center justify-center -mr-4">
                 <div className="w-full flex items-center justify-center">
-                  <img src="/group_people.png" alt="" className="h-16" />
-                </div>
-                <div className="w-full flex items-center">
-                  <img src="/group_star.png" alt="" className="h-5" />
+                  <img src="/images/group_people.svg" alt="" className="h-20" />
                 </div>
               </div>
               <div className="flex items-center justify-center w-14 h-14 -mt-8">
-                <img src="/dotted.png" alt="" className="w-14 h-14" />
+                <img src="/images/dotted.svg" alt="" className="w-14 h-14" />
               </div>
             </div>
           </div>
           <div className="md:w-2/5 h-screen w-full flex items-center justify-center md:ml-10 md:my-0 pr-10">
             <img
-              src="/iphone.png"
+              src="/images/group_phone_1.svg"
               alt=""
               className="h-96 z-50 md:absolute object-contain"
-            />
-            <img
-              src="/x.png"
-              alt=""
-              className="mt-60 md:-ml-56 -ml-60 h-20 z-10 absolute object-contain"
-            />
-            <img
-              src="/points.png"
-              alt=""
-              className="-mr-60 mt-10 h-36 z-10 absolute object-contain"
             />
           </div>
         </div>
@@ -102,7 +95,7 @@ export default function Index() {
       <div className="flex w-full items-center flex-col md:flex-row h-full bg-[#343236] justify-between">
         <div className="md:w-1/2 w-full h-full relative">
           <img
-            src="/player.png"
+            src="/images/player_soccer.svg"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -126,23 +119,23 @@ export default function Index() {
             <div className="w-44 rounded-full bg-green-600 mt-4 h-2" />
             <div className="flex flex-col gap-8 w-full mt-10">
               <div className="flex items-center text-2xl font-semibold text-white">
-                <img src="/radio.png" alt="" />
+                <img src="/images/radio.svg" alt="" className="w-10" />
                 Banners profissionais
               </div>
               <div className="flex items-center text-2xl font-semibold text-white">
-                <img src="/radio.png" alt="" />
+                <img src="/images/radio.svg" alt="" className="w-10" />
                 Gráficos e estatísticas detalhadas
               </div>
               <div className="flex items-center text-2xl font-semibold text-white">
-                <img src="/radio.png" alt="" />
+                <img src="/images/radio.svg" alt="" className="w-10" />
                 Agenda de Jogos
               </div>
               <div className="flex items-center text-2xl font-semibold text-white">
-                <img src="/radio.png" alt="" />
+                <img src="/images/radio.svg" alt="" className="w-10" />
                 Gerenciamento de times
               </div>
               <div className="flex items-center text-2xl font-semibold text-white">
-                <img src="/radio.png" alt="" />
+                <img src="/images/radio.svg" alt="" className="w-10" />
                 Análise de jogadores
               </div>
             </div>
@@ -172,7 +165,7 @@ export default function Index() {
         </div>
         <div className="md:w-1/2 w-full h-full text-center">
           <div className="flex items-center justify-center px-10">
-            <img src="/group_phone_primary.png" alt="" />
+            <img src="/images/group_phone_2.svg" alt="" />
           </div>
         </div>
         <div className="md:w-1/2 w-full h-full md:hidden mt-10">
@@ -198,11 +191,7 @@ export default function Index() {
       </div>
       <div className="flex flex-col md:flex-row items-center h-full bg-[#343236] justify-between md:py-10 pt-10 md:pt-0">
         <div className="md:w-1/2 w-full h-full flex items-center justify-center px-10">
-          <img
-            src="/group_phone.png"
-            alt=""
-            className="z-50 relative object-contain"
-          />
+          <img src="/images/group_phone_3.svg" alt="" />
         </div>
         <div className="md:w-1/2 w-full h-full mt-10 md:mt-0">
           <div className="w-full flex flex-col md:flex-row items-center md:justify-start justify-center">
@@ -250,15 +239,11 @@ export default function Index() {
           </div>
         </div>
         <div className="md:w-1/2 w-full h-full flex items-center justify-center mt-10 md:mt-0 px-10">
-          <img
-            src="/group_play_soccer.png"
-            alt=""
-            className="z-50 relative object-contain"
-          />
+          <img src="/images/group_phone_4.svg" alt="" />
         </div>
         <div className="md:w-1/2 block md:hidden w-full h-full">
           <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center pt-10 md:pt-24">
-            <h1 className="text-2xl md:text-3xl font-bold text-white text-center md:text-right">
+            <h1 className="text-2xl md:text-2xl font-bold text-white text-center md:text-right">
               AGENDA DE
               <br />
               JOGOS
@@ -281,11 +266,7 @@ export default function Index() {
       </div>
       <div className="flex flex-col md:flex-row items-center h-full bg-[#343236] md:justify-between justify-center md:mt-0 pt-10">
         <div className="md:w-1/2 w-full h-full flex items-center justify-center px-10">
-          <img
-            src="/group_phone_2.png"
-            alt=""
-            className="object-contain z-50 relative"
-          />
+          <img src="/images/group_phone_5.svg" alt="" />
         </div>
         <div className="md:w-1/2 w-full h-full py-10">
           <div className="w-full flex flex-col md:flex-row items-center md:justify-start justify-center md:mt-24">
@@ -310,7 +291,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center w-full h-full bg-[#343236] md:justify-between justify-center">
+      <div className="flex flex-col md:flex-row items-center w-full h-full bg-[#343236] md:justify-between justify-center md:pt-20">
         <div className="md:w-1/2 w-full h-full hidden md:block">
           <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center">
             <h1 className="text-3xl font-bold text-white md:text-right text-center">
@@ -333,11 +314,7 @@ export default function Index() {
           </div>
         </div>
         <div className="md:w-1/2 w-full h-full flex items-center justify-center px-10">
-          <img
-            src="/group_phone_3.png"
-            alt=""
-            className="z-50 relative object-contain"
-          />
+          <img src="/images/group_phone_6.svg" alt="" />
         </div>
         <div className="md:w-1/2 w-full h-full block md:hidden">
           <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center md:mt-24 mt-10">
@@ -361,10 +338,24 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full items-start h-full bg-[#343236] justify-center md:justify-start pl-10 md:pl-32 pt-24">
-        <h1 className="text-xl md:text-2xl font-bold text-white">
-          RECOMENDADO POR CENTENAS DE JOGADORES COMO VOCÊ
-        </h1>
+      <div className="flex flex-col w-full items-center h-full bg-[#343236] justify-center md:justify-start pl-10 md:pl-32 pt-24">
+        <div className="w-full flex items-center justify-between">
+          <h1 className="text-lg md:text-2xl font-bold text-white">
+            RECOMENDADO POR CENTENAS DE JOGADORES COMO VOCÊ
+          </h1>
+          <div className="flex items-center md:gap-8 gap-4 justify-center w-full">
+            <img
+              src="/images/arrow_left.svg"
+              alt=""
+              className="cursor-pointer"
+            />
+            <img
+              src="/images/arrow_right.svg"
+              alt=""
+              className="cursor-pointer"
+            />
+          </div>
+        </div>
         <div className="flex items-center gap-8 justify-end w-full mt-10 md:mt-20">
           <div className="bg-[#3F3E41] md:w-[500px] p-10 rounded-lg md:h-[300px]">
             <p className="font-semibold text-white text-lg">
@@ -373,7 +364,11 @@ export default function Index() {
               agenda organizada dos próximos jogos.”
             </p>
             <div className="mt-4 flex items-center gap-4">
-              <img src="/people1.png" alt="" className="object-contain w-14" />
+              <img
+                src="/images/people_1.svg"
+                alt=""
+                className="object-contain w-16"
+              />
               <div>
                 <p className="text-white font-bold text-lg">Rosélia Wolf</p>
                 <p className="font-light text-green-600 text-lg">
@@ -388,7 +383,11 @@ export default function Index() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.”
             </p>
             <div className="mt-4 flex items-center gap-4">
-              <img src="/people2.png" alt="" className="object-contain w-14" />
+              <img
+                src="/images/people_2.svg"
+                alt=""
+                className="object-contain w-16"
+              />
               <div>
                 <p className="text-white font-bold text-lg">Erê Dias</p>
                 <p className="font-light text-green-600 text-lg">Arapiraca</p>
@@ -399,18 +398,22 @@ export default function Index() {
       </div>
       <div className="flex items-center w-full h-full gap-4 bg-[#343236] justify-center md:justify-end md:pr-32 pt-16">
         <Link href="https://play.google.com/store" target="_blank">
-          <img src="/playstore.png" alt="" className="md:pl-0 pl-4 w-56" />
+          <img
+            src="/images/googleplay.svg"
+            alt=""
+            className="md:pl-0 pl-4 w-56"
+          />
         </Link>
         <Link href="https://play.google.com/store" target="_blank">
           <img
-            src="/appstore.png"
+            src="/images/appstore.svg"
             alt=""
             className="md:pl-0 pl-4 pr-4 md:pr-0 w-56"
           />
         </Link>
       </div>
       <div className="flex w-full bg-[#343236]">
-        <img src="/bottom_cover.png" alt="" className="md:pt-24 pt-10" />
+        <img src="/images/bottom_cover.svg" alt="" className="md:pt-24 pt-10" />
       </div>
       <div className="flex items-center w-full flex-col justify-center md:mt-24 pt-10 bg-white">
         <h1 className="md:text-6xl text-3xl text-[#343236] font-bold mb-10 md:mb-24">
@@ -418,27 +421,27 @@ export default function Index() {
         </h1>
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:mb-0 mb-10">
           <Link href="#" target="_blank">
-            <img src="/card1.png" alt="" className="cursor-pointer" />
+            <img src="/images/card_1.svg" alt="" className="cursor-pointer" />
           </Link>
           <Link href="#" target="_blank">
-            <img src="/card2.png" alt="" className="cursor-pointer" />
+            <img src="/images/card_2.svg" alt="" className="cursor-pointer" />
           </Link>
           <Link href="#" target="_blank">
-            <img src="/card3.png" alt="" className="cursor-pointer" />
+            <img src="/images/card_3.svg" alt="" className="cursor-pointer" />
           </Link>
         </div>
       </div>
       <div className="w-full flex items-center justify-between px-8 md:px-20 my-8 md:my-24">
         <div className="bg-[#343236] flex items-center justify-between w-full rounded-2xl">
           <div className="p-8 hidden md:block">
-            <img src="/logo.png" alt="" />
+            <img src="/images/logo.svg" alt="" />
           </div>
           <div className="flex flex-col pl-4 md:py-4 py-8 md:pl-0 md:py-0">
             <div className="flex items-center justify-end gap-4">
               <div className="bg-[#42BD3D] rounded-lg p-2">
                 <Link href="https://www.instagram.com/" target="_blank">
                   <img
-                    src="/facebook-circle-fill.png"
+                    src="/images/facebook_logo.svg"
                     alt=""
                     className="w-6 md:w-10"
                   />
@@ -447,7 +450,7 @@ export default function Index() {
               <div className="bg-[#42BD3D] rounded-lg p-2">
                 <Link href="https://www.instagram.com/" target="_blank">
                   <img
-                    src="/instagram-fill.png"
+                    src="/images/instagram_logo.svg"
                     alt=""
                     className="w-6 md:w-10"
                   />
@@ -455,7 +458,11 @@ export default function Index() {
               </div>
               <div className="bg-[#42BD3D] rounded-lg p-2 md:mr-10 mr-4">
                 <Link href="https://www.instagram.com/" target="_blank">
-                  <img src="/mail-fill.png" alt="" className="w-6 md:w-10" />
+                  <img
+                    src="/images/mail_logo.svg"
+                    alt=""
+                    className="w-6 md:w-10"
+                  />
                 </Link>
               </div>
             </div>
