@@ -1,5 +1,5 @@
 import Link from "next/link";
-import * as S from "../styles/navbar";
+import * as S from "@/styles/navbar";
 
 export default function Index() {
   return (
@@ -8,7 +8,7 @@ export default function Index() {
         <S.ContainerNavbar>
           <S.NavbarPrimary>
             <S.ContainerLogo>
-              <S.Logo src="/logo.png" className="" />
+              <S.Logo src="/logo.png" />
             </S.ContainerLogo>
             <S.BorderRightGray />
             <div className="md:block hidden flex items-center gap-8 z-50">
@@ -27,7 +27,10 @@ export default function Index() {
             </div>
           </S.NavbarPrimary>
           <div className="w-44 pr-4 md:block hidden">
-            <button className="bg-[#343236] text-white px-4 py-2 shadow-xl rounded font-semibold text-lg">
+            <button
+              className="bg-[#343236] text-white px-6 py-4 shadow-xl rounded-lg font-semibold text-lg"
+              style={{ whiteSpace: "nowrap" }}
+            >
               Baixar grátis
             </button>
           </div>
@@ -36,7 +39,7 @@ export default function Index() {
           </div>
         </S.ContainerNavbar>
         <div className="w-full flex-col md:flex-row flex items-center">
-          <div className="md:w-3/5 w-full md:ml-44 mt-10 md:mt-20">
+          <div className="md:w-3/5 w-full h-full md:pl-16 mt-10 md:mt-20">
             <div className="flex items-center ml-8 md:ml-0 gap-2">
               <div className="inline-block rounded-full bg-[#343236] text-white p-2">
                 <div className="flex items-center gap-2 font-light">
@@ -47,37 +50,37 @@ export default function Index() {
               <img src="/point.png" alt="" className="w-6 -ml-6 -mt-9" />
             </div>
             <div className="flex flex-col max-w-xl ml-8 md:ml-0 mt-6">
-              <span className="text-white font-extrabold text-4xl text-left">
-                DOMINO O JOGO COM UM TIME CAMPEÃO!
+              <span className="text-white font-extrabold md:text-4xl text-2xl text-left">
+                DOMINE O JOGO COM UM TIME CAMPEÃO!
               </span>
-              <span className="text-white mt-2 font-light">
+              <span className="text-white md:text-normal text-sm mt-2 md:mr-0 mr-2 font-light">
                 Alcance a vitória de forma completa, tenha estratégias avançadas
                 e análises de desempenho em tempo real para seu time de futebol.
               </span>
             </div>
-            <div className="flex items-center ml-8 md:ml-0 gap-8 mt-10">
+            <div className="flex items-center justify-center md:justify-start mt-10 md:ml-10">
               <Link href="https://play.google.com/store" target="_blank">
-                <img src="/playstore.png" alt="" className="w-56" />
+                <img src="/playstore.png" alt="" className="w-44 h-14" />
               </Link>
               <Link href="https://play.google.com/store" target="_blank">
-                <img src="/appstore.png" alt="" className="w-56" />
+                <img src="/appstore.png" alt="" className="w-44 h-14" />
               </Link>
             </div>
-            <div className="flex flex-col items-center ml-8 md:ml-0 justify-center">
-              <img
-                src="/dotted.png"
-                alt=""
-                className="w-14 h-14 ml-48 md:-ml-20"
-              />
-              <div className="w-full -mt-8 -pr-10">
-                <img src="/group_people.png" alt="" className="h-16" />
+            <div className="flex justify-start items-start md:ml-0 my-10">
+              <div className="flex flex-col items-center justify-center">
+                <div className="w-full flex items-center justify-center">
+                  <img src="/group_people.png" alt="" className="h-16" />
+                </div>
+                <div className="w-full flex items-center">
+                  <img src="/group_star.png" alt="" className="h-5" />
+                </div>
               </div>
-              <div className="w-full mt-2 ml-2">
-                <img src="/group_star.png" alt="" className="h-5" />
+              <div className="flex items-center justify-center w-14 h-14 -mt-8">
+                <img src="/dotted.png" alt="" className="w-14 h-14" />
               </div>
             </div>
           </div>
-          <div className="md:w-2/5 w-full flex items-center justify-center md:ml-10 my-20 md:my-0 pr-20">
+          <div className="md:w-2/5 h-screen w-full flex items-center justify-center md:ml-10 md:my-0 pr-10">
             <img
               src="/iphone.png"
               alt=""
@@ -86,29 +89,33 @@ export default function Index() {
             <img
               src="/x.png"
               alt=""
-              className="-mb-44 md:-ml-60 -ml-40 h-16 md:h-28 z-10 absolute object-contain"
+              className="mt-60 md:-ml-56 -ml-60 h-20 z-10 absolute object-contain"
             />
             <img
               src="/points.png"
               alt=""
-              className="-mr-60 z-10 absolute object-contain"
+              className="-mr-60 mt-10 h-36 z-10 absolute object-contain"
             />
           </div>
         </div>
       </S.ContainerHeader>
-      <div className="flex items-center flex-col md:flex-row h-full bg-[#343236] justify-between">
-        <div className="md:w-1/2 w-full h-full">
-          <img src="/player.png" alt="" className="bg-cover" />
+      <div className="flex w-full items-center flex-col md:flex-row h-full bg-[#343236] justify-between">
+        <div className="md:w-1/2 w-full h-full relative">
+          <img
+            src="/player.png"
+            alt=""
+            className="w-full h-full object-cover"
+          />
         </div>
-        <div className="md:w-1/2 w-full md:h-screen flex-col md:ml-10 pl-10">
-          <div className="h-full w-full mt-10 md:mt-0">
+        <div className="md:w-1/2 p-8 w-full md:h-full flex-col">
+          <div className="h-full w-full md:mt-0">
             <h1 className="text-green-600 md:text-3xl text-2xl font-light">
               Junte-se a nós
             </h1>
             <h2 className="my-4 md:text-4xl text-2xl md:pr-4 font-bold text-white">
               A VIDA É UM JOGO E PRECISAMOS DE GOLS
             </h2>
-            <div className="md:w-[550px] w-[400px]">
+            <div>
               <span className="font-semibold text-gray-300 text-white text-lg">
                 Descubra o app perfeito para apaixonados por futebol!
                 <br /> Mantenha seus jogos organizados, registre os resultados
@@ -142,10 +149,10 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center h-full bg-[#343236] gap-20 justify-between p-20">
-        <div className="md:w-1/2 h-full hidden md:block">
+      <div className="flex flex-col md:flex-row items-center md:py-10 w-full h-full bg-[#343236] justify-between">
+        <div className="md:w-1/2 w-full h-full hidden md:block">
           <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center">
-            <h1 className="text-4xl font-bold text-white text-center md:text-right">
+            <h1 className="text-2xl md:text-4xl font-bold text-white text-center md:text-right">
               BANNERS
               <br />
               PROFISSIONAIS
@@ -164,22 +171,13 @@ export default function Index() {
           </div>
         </div>
         <div className="md:w-1/2 w-full h-full text-center">
-          <div className="flex items-center justify-center">
-            <img
-              src="/iphonexr.png"
-              alt=""
-              className="md:h-[550px] h-[400px] z-50 relative object-contain"
-            />
-            <img
-              src="/visa.png"
-              alt=""
-              className="md:h-96 absolute w-[28rem] z-10 object-contain"
-            />
+          <div className="flex items-center justify-center px-10">
+            <img src="/group_phone_primary.png" alt="" />
           </div>
         </div>
-        <div className="md:w-1/2 h-full md:hidden">
+        <div className="md:w-1/2 w-full h-full md:hidden mt-10">
           <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center md:mt-24">
-            <h1 className="text-3xl font-bold text-white text-center md:text-right">
+            <h1 className="text-2xl font-bold text-white text-center md:text-right">
               BANNERS
               <br />
               PROFISSIONAIS
@@ -187,7 +185,7 @@ export default function Index() {
             <div className="ml-4 w-44 md:h-20 md:w-1 bg-green-600 h-1 md:h-0 rounded-full mt-2 md:mt-0" />
           </div>
           <div className="w-full flex items-center md:justify-end justify-center mt-4">
-            <span className="md:text-right text-center md:px-0 px-10 font-semibold text-gray-300 text-lg w-[500px]">
+            <span className="md:text-right text-center md:px-0 px-10 font-semibold text-gray-300 text-base w-[500px]">
               Faça seu time brilhar nas redes sociais, impressione seus
               adversários e atraia torcedores de todos os cantos com designs
               profissionais e personalizados. Deixe a concorrência no chinelo
@@ -198,18 +196,18 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center h-full bg-[#343236] md:gap-44 justify-between">
-        <div className="md:w-1/2 w-full h-full flex items-center justify-center">
+      <div className="flex flex-col md:flex-row items-center h-full bg-[#343236] justify-between md:py-10 pt-10 md:pt-0">
+        <div className="md:w-1/2 w-full h-full flex items-center justify-center px-10">
           <img
             src="/group_phone.png"
             alt=""
-            className="h-[600px] p-10 md:p-0 md:ml-60 z-50 relative object-contain"
+            className="z-50 relative object-contain"
           />
         </div>
-        <div className="md:w-1/2 w-full h-full">
-          <div className="w-full flex flex-col md:flex-row items-center md:justify-start justify-center md:mt-24">
-            <div className="pr-4 h-20 w-1 bg-green-600 rounded-full hidden md:block" />
-            <h1 className="text-3xl font-bold text-white text-center md:text-left">
+        <div className="md:w-1/2 w-full h-full mt-10 md:mt-0">
+          <div className="w-full flex flex-col md:flex-row items-center md:justify-start justify-center">
+            <div className="mr-4 h-20 w-1 bg-green-600 rounded-full hidden md:block" />
+            <h1 className="text-2xl md:text-3xl font-bold text-white text-center md:text-left">
               GRÁFICOS E
               <br />
               ESTATÍSTICAS
@@ -217,7 +215,7 @@ export default function Index() {
             <div className="md:pr-4 md:h-20 md:w-1 w-32 mt-2 md:mt-0 h-1 bg-green-600 rounded-full md:hidden block" />
           </div>
           <div className="w-full flex items-center md:justify-start justify-center px-10 md:px-0 mt-4">
-            <span className="md:text-left text-center font-semibold text-gray-300 text-lg w-[500px]">
+            <span className="md:text-left text-center font-semibold text-gray-300 text-base md:text-lg w-[500px]">
               Deixe a magia dos números trabalhar a seu favor! Com nossos
               gráficos e estatísticas incríveis, você terá o poder de
               transformar dados em vitórias! Descubra os segredos ocultos nos
@@ -228,7 +226,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center h-full bg-[#343236] md:gap-44 md:justify-between">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full h-full bg-[#343236] md:justify-between md:py-10">
         <div className="md:w-1/2 hidden md:block w-full h-full">
           <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center mt-24">
             <h1 className="text-4xl font-bold text-white text-center md:text-right">
@@ -251,16 +249,16 @@ export default function Index() {
             </span>
           </div>
         </div>
-        <div className="md:w-1/2 w-full h-full flex items-center justify-center mt-20 md:mt-0">
+        <div className="md:w-1/2 w-full h-full flex items-center justify-center mt-10 md:mt-0 px-10">
           <img
             src="/group_play_soccer.png"
             alt=""
-            className="md:h-[600px] h-[400px] md:mr-60 z-50 relative object-contain"
+            className="z-50 relative object-contain"
           />
         </div>
         <div className="md:w-1/2 block md:hidden w-full h-full">
           <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center pt-10 md:pt-24">
-            <h1 className="text-3xl font-bold text-white text-center md:text-right">
+            <h1 className="text-2xl md:text-3xl font-bold text-white text-center md:text-right">
               AGENDA DE
               <br />
               JOGOS
@@ -269,7 +267,7 @@ export default function Index() {
             <div className="h-1 w-32 mt-2 md:mt-0 bg-green-600 rounded-full md:hidden block" />
           </div>
           <div className="w-full flex items-center md:justify-end justify-center mt-4">
-            <span className="md:text-right text-center font-semibold text-gray-300 text-lg md:w-[500px] w-full px-10 md:px-0">
+            <span className="md:text-right text-center font-semibold text-gray-300 text-base md:text-lg md:w-[500px] w-full px-10 md:px-0">
               Chega de perder jogos por falta de organização! Com nossa feature
               de agenda de jogos, você será o mestre do cronograma esportivo!
               Esqueça os tempos confusos de marcar jogos no papel, agora é tudo
@@ -281,18 +279,18 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center h-full bg-[#343236] md:gap-44 md:justify-between justify-center pt-10 md:mt-0 pt-10">
-        <div className="md:w-1/2 w-full h-full flex items-center justify-center">
+      <div className="flex flex-col md:flex-row items-center h-full bg-[#343236] md:justify-between justify-center md:mt-0 pt-10">
+        <div className="md:w-1/2 w-full h-full flex items-center justify-center px-10">
           <img
             src="/group_phone_2.png"
             alt=""
-            className="object-contain md:h-[37.5rem] h-[25rem] md:ml-60 z-50 relative"
+            className="object-contain z-50 relative"
           />
         </div>
-        <div className="md:w-1/2 w-full h-full">
-          <div className="w-full flex flex-col md:flex-row items-center md:justify-start justify-center md:mt-24 mt-10">
-            <div className="pr-4 hidden md:block h-20 w-1 bg-green-600 rounded-full" />
-            <h1 className="text-3xl font-bold text-white text-center md:text-left">
+        <div className="md:w-1/2 w-full h-full py-10">
+          <div className="w-full flex flex-col md:flex-row items-center md:justify-start justify-center md:mt-24">
+            <div className="mr-4 hidden md:block h-20 w-1 bg-green-600 rounded-full" />
+            <h1 className="text-2xl md:text-3xl font-bold text-white text-center md:text-left">
               GERENCIAMENTO
               <br />
               DE TIMES
@@ -300,7 +298,7 @@ export default function Index() {
             <div className="pr-4 mt-2 block md:hidden h-1 w-32 bg-green-600 rounded-full" />
           </div>
           <div className="w-full flex items-center justify-start mt-4">
-            <span className="md:text-left text-center px-10 px:0 font-semibold text-gray-300 text-lg md:w-[31.25rem] w-full">
+            <span className="md:text-left text-center font-semibold text-gray-300 text-base md:text-lg md:w-[31.25rem] w-full px-10 md:px-0">
               Gerencie, motive e leve cada equipe à glória, tudo com apenas
               alguns toques mágicos no seu celular. Aplique sua estratégia em
               múltiplos campos, conquiste títulos em todas as ligas e mostre ao
@@ -312,9 +310,9 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center h-full bg-[#343236] md:gap-44 md:justify-between justify-center">
+      <div className="flex flex-col md:flex-row items-center w-full h-full bg-[#343236] md:justify-between justify-center">
         <div className="md:w-1/2 w-full h-full hidden md:block">
-          <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center mt-24">
+          <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center">
             <h1 className="text-3xl font-bold text-white md:text-right text-center">
               ANÁLISE DE
               <br />
@@ -334,16 +332,16 @@ export default function Index() {
             </span>
           </div>
         </div>
-        <div className="md:w-1/2 w-full h-full flex items-center justify-center mt-10">
+        <div className="md:w-1/2 w-full h-full flex items-center justify-center px-10">
           <img
             src="/group_phone_3.png"
             alt=""
-            className="md:h-[600px] h-[400px] md:mr-60 z-50 relative object-contain"
+            className="z-50 relative object-contain"
           />
         </div>
         <div className="md:w-1/2 w-full h-full block md:hidden">
           <div className="w-full flex flex-col md:flex-row items-center md:justify-end justify-center md:mt-24 mt-10">
-            <h1 className="text-4xl font-bold text-white md:text-right text-center">
+            <h1 className="text-2xl md:text-4xl font-bold text-white md:text-right text-center">
               ANÁLISE DE
               <br />
               JOGADORES
@@ -352,7 +350,7 @@ export default function Index() {
             <div className="h-1 w-32 bg-green-600 rounded-full block md:hidden mt-2" />
           </div>
           <div className="w-full flex items-center md:justify-end justify-center mt-4">
-            <span className="md:text-right text-center px-10 md:px-0 font-semibold text-gray-300 text-lg w-[500px]">
+            <span className="md:text-right text-center px-10 md:px-0 font-semibold text-gray-300 text-base md:text-lg w-[500px]">
               Vasculhe cada detalhe, desde as habilidades mágicas até os pontos
               fracos, e torne-se o especialista em escalações perfeitas. Abrace
               a ciência dos pés à cabeça, decifre estatísticas como um gênio e
@@ -363,8 +361,8 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-start h-full bg-[#343236] justify-center md:justify-start pl-10 md:pl-32 pt-24">
-        <h1 className="text-xl font-bold text-white">
+      <div className="flex flex-col w-full items-start h-full bg-[#343236] justify-center md:justify-start pl-10 md:pl-32 pt-24">
+        <h1 className="text-xl md:text-2xl font-bold text-white">
           RECOMENDADO POR CENTENAS DE JOGADORES COMO VOCÊ
         </h1>
         <div className="flex items-center gap-8 justify-end w-full mt-10 md:mt-20">
@@ -375,7 +373,7 @@ export default function Index() {
               agenda organizada dos próximos jogos.”
             </p>
             <div className="mt-4 flex items-center gap-4">
-              <img src="/people1.png" alt="" className="object-contain" />
+              <img src="/people1.png" alt="" className="object-contain w-14" />
               <div>
                 <p className="text-white font-bold text-lg">Rosélia Wolf</p>
                 <p className="font-light text-green-600 text-lg">
@@ -390,7 +388,7 @@ export default function Index() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.”
             </p>
             <div className="mt-4 flex items-center gap-4">
-              <img src="/people2.png" alt="" className="object-contain" />
+              <img src="/people2.png" alt="" className="object-contain w-14" />
               <div>
                 <p className="text-white font-bold text-lg">Erê Dias</p>
                 <p className="font-light text-green-600 text-lg">Arapiraca</p>
@@ -399,22 +397,22 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="flex items-center h-full gap-4 bg-[#343236] justify-center md:justify-end md:pr-32 pt-16">
+      <div className="flex items-center w-full h-full gap-4 bg-[#343236] justify-center md:justify-end md:pr-32 pt-16">
         <Link href="https://play.google.com/store" target="_blank">
-          <img src="/playstore.png" alt="" className="md:pl-0 pl-4" />
+          <img src="/playstore.png" alt="" className="md:pl-0 pl-4 w-56" />
         </Link>
         <Link href="https://play.google.com/store" target="_blank">
           <img
             src="/appstore.png"
             alt=""
-            className="md:pl-0 pl-4 pr-4 md:pr-0"
+            className="md:pl-0 pl-4 pr-4 md:pr-0 w-56"
           />
         </Link>
       </div>
       <div className="flex w-full bg-[#343236]">
         <img src="/bottom_cover.png" alt="" className="md:pt-24 pt-10" />
       </div>
-      <div className="flex items-center flex-col justify-center md:mt-24 pt-10 bg-white">
+      <div className="flex items-center w-full flex-col justify-center md:mt-24 pt-10 bg-white">
         <h1 className="md:text-6xl text-3xl text-[#343236] font-bold mb-10 md:mb-24">
           BLOGS E ARTIGOS
         </h1>
@@ -436,8 +434,8 @@ export default function Index() {
             <img src="/logo.png" alt="" />
           </div>
           <div className="flex flex-col pl-4 md:py-4 py-8 md:pl-0 md:py-0">
-            <div className="flex items-center justify-end">
-              <div className="bg-[#42BD3D] rounded-lg p-2 mr-4">
+            <div className="flex items-center justify-end gap-4">
+              <div className="bg-[#42BD3D] rounded-lg p-2">
                 <Link href="https://www.instagram.com/" target="_blank">
                   <img
                     src="/facebook-circle-fill.png"
@@ -446,7 +444,7 @@ export default function Index() {
                   />
                 </Link>
               </div>
-              <div className="bg-[#42BD3D] rounded-lg p-2 mr-4">
+              <div className="bg-[#42BD3D] rounded-lg p-2">
                 <Link href="https://www.instagram.com/" target="_blank">
                   <img
                     src="/instagram-fill.png"
@@ -455,14 +453,14 @@ export default function Index() {
                   />
                 </Link>
               </div>
-              <div className="bg-[#42BD3D] rounded-lg p-2 md:mr-8 mr-4">
+              <div className="bg-[#42BD3D] rounded-lg p-2 md:mr-10 mr-4">
                 <Link href="https://www.instagram.com/" target="_blank">
                   <img src="/mail-fill.png" alt="" className="w-6 md:w-10" />
                 </Link>
               </div>
             </div>
             <div className="mt-4 text-right md:text-center pr-4">
-              <span className="text-white text-sm md:text-normal italic mr-8">
+              <span className="text-white md:text-sm text-xs md:text-normal italic pr-8">
                 © 2023 JogueirosFC. Todos os direitos reservados - CNPJ:
                 59.546.515/0045-55
               </span>
