@@ -385,13 +385,13 @@ export default function Index() {
                 </div>
                 <div className="w-full flex items-center md:justify-end justify-center mt-4">
                   <span className="md:text-right text-center md:px-0 md:ml-10 px-10 font-normal text-gray-300 text-lg 2xl:text-xl">
-                    Vasculhe cada detalhe, desde as habilidades mágicas até os
-                    pontos fracos, e torne-se o especialista em escalações
-                    perfeitas. Abrace a ciência dos pés à cabeça, decifre
-                    estatísticas como um gênio e monte o time dos sonhos que
-                    deixará seus adversários de queixo caído. Desvende o
+                    &quot;Vasculhe cada detalhe, desde as habilidades mágicas
+                    até os pontos fracos, e torne-se o especialista em
+                    escalações perfeitas. Abrace a ciência dos pés à cabeça,
+                    decifre estatísticas como um gênio e monte o time dos sonhos
+                    que deixará seus adversários de queixo caído. Desvende o
                     potencial oculto, pois a vitória está nos detalhes, e você
-                    está pronto para brilhar!"
+                    está pronto para brilhar!&quot;
                   </span>
                 </div>
               </div>
@@ -416,13 +416,13 @@ export default function Index() {
               </div>
               <div className="w-full flex items-center justify-center mt-8">
                 <span className="text-center px-10 font-normal text-gray-300">
-                  Vasculhe cada detalhe, desde as habilidades mágicas até os
-                  pontos fracos, e torne-se o especialista em escalações
+                  &quot;Vasculhe cada detalhe, desde as habilidades mágicas até
+                  os pontos fracos, e torne-se o especialista em escalações
                   perfeitas. Abrace a ciência dos pés à cabeça, decifre
                   estatísticas como um gênio e monte o time dos sonhos que
                   deixará seus adversários de queixo caído. Desvende o potencial
                   oculto, pois a vitória está nos detalhes, e você está pronto
-                  para brilhar!"
+                  para brilhar!&quot;
                 </span>
               </div>
             </div>
@@ -450,9 +450,9 @@ export default function Index() {
         <div className="flex items-center gap-8 justify-end w-full mt-10 md:mt-20">
           <div className="bg-[#3F3E41] md:w-[500px] p-10 rounded-lg md:h-[300px]">
             <p className="font-normal text-white text-xl">
-              “Um app projetado para todos que desejam manter seus jogos
+              &quot;Um app projetado para todos que desejam manter seus jogos
               organizados, guardando os resultados do seu time e mantendo uma
-              agenda organizada dos próximos jogos.”
+              agenda organizada dos próximos jogos.&quot;
             </p>
             <div className="mt-4 flex items-center gap-4">
               <img
@@ -470,8 +470,9 @@ export default function Index() {
           </div>
           <div className="bg-[#3F3E41] md:w-[500px] p-10 rounded-lg md:h-[300px] hidden md:block">
             <p className="font-normal text-white text-xl">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+              &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua.&quot;
             </p>
             <div className="mt-4 flex items-center gap-4">
               <img
