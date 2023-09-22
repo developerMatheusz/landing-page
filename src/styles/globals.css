@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 .custom-background {
-  background-image: url("/soccer.png");
+  background-image: url("/images/soccer.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
