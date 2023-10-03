@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
+import { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { useEffect, useState } from "react";
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -9,6 +10,8 @@ export default function Index() {
   const isMdScreen = window.innerWidth < 1000;
   const perView = isMdScreen ? 0.9 : 2.9;
   const spacing = isMdScreen ? 10 : 35;
+
+  console.log(currentSlide);
 
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
