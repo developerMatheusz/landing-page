@@ -7,9 +7,14 @@ import "keen-slider/keen-slider.min.css";
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
-  const isMdScreen = window.innerWidth < 1000;
-  const perView = isMdScreen ? 0.9 : 2.9;
-  const spacing = isMdScreen ? 10 : 35;
+  let perView;
+  let spacing;
+
+  if (typeof window !== "undefined") {
+    const isMdScreen = window.innerWidth < 1000;
+    perView = isMdScreen ? 0.9 : 2.9;
+    spacing = isMdScreen ? 10 : 35;
+  }
 
   console.log(currentSlide);
 
