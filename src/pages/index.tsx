@@ -1,6 +1,32 @@
 import Link from "next/link";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import { useEffect, useState } from "react";
 
 export default function Index() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const isMdScreen = window.innerWidth < 1000;
+  const perView = isMdScreen ? 0.9 : 2.9;
+  const spacing = isMdScreen ? 10 : 35;
+
+  const [sliderRef, instanceRef] = useKeenSlider({
+    initial: 0,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
+    },
+    mode: "free",
+    loop: true,
+    slides: { origin: "auto", perView, spacing },
+    range: {
+      min: -5,
+      max: 5
+    }
+  });
+
   return (
     <div className="w-full h-full flex flex-col">
       <div className="w-full h-full custom-background">
@@ -435,54 +461,101 @@ export default function Index() {
             RECOMENDADO POR CENTENAS DE JOGADORES COMO VOCÊ
           </h1>
           <div className="flex items-center md:gap-8 gap-4 justify-center w-full">
-            <img
-              src="/images/arrow_left.svg"
-              alt=""
-              className="cursor-pointer"
-            />
-            <img
-              src="/images/arrow_right.svg"
-              alt=""
-              className="cursor-pointer"
-            />
+            {loaded && instanceRef.current && (
+              <>
+                <img
+                  src="/images/arrow_left.svg"
+                  alt=""
+                  className="cursor-pointer"
+                  onClick={(e: any) =>
+                    e.stopPropagation() || instanceRef.current?.prev()
+                  }
+                />
+                <img
+                  src="/images/arrow_right.svg"
+                  alt=""
+                  className="cursor-pointer"
+                  onClick={(e: any) =>
+                    e.stopPropagation() || instanceRef.current?.next()
+                  }
+                />
+              </>
+            )}
           </div>
         </div>
-        <div className="flex items-center gap-8 justify-end w-full mt-10 md:mt-20">
-          <div className="bg-[#3F3E41] md:w-[500px] p-10 rounded-lg md:h-[300px]">
-            <p className="font-normal text-white text-xl">
-              &quot;Um app projetado para todos que desejam manter seus jogos
-              organizados, guardando os resultados do seu time e mantendo uma
-              agenda organizada dos próximos jogos.&quot;
-            </p>
-            <div className="mt-4 flex items-center gap-4">
+        <div
+          className="flex items-center justify-center w-full mt-10 md:mt-20 keen-slider"
+          ref={sliderRef}
+        >
+          <div className="keen-slider__slide number-slide1 bg-[#3F3E41] flex flex-col items-center justify-center md:w-[500px] p-10 rounded-lg md:h-[300px]">
+            <div className="h-1/2">
+              <p className="font-normal text-white 2xl:text-xl text-lg">
+                &quot;Um app projetado para todos que desejam manter seus jogos
+                organizados, guardando os resultados do seu time e mantendo uma
+                agenda organizada dos próximos jogos.&quot;
+              </p>
+            </div>
+            <div className="2xl:mt-4 mt-6 pt-32 w-full h-1/2 flex items-end justify-start gap-4">
               <img
                 src="/images/people_1.svg"
                 alt=""
-                className="object-contain w-16"
+                className="object-contain 2xl:w-24 w-16"
               />
-              <div>
-                <p className="text-white font-bold text-lg">Rosélia Wolf</p>
-                <p className="font-light text-green-600 text-lg">
+              <div className="flex flex-col items-start justify-start 2xl:mb-5 mb-2">
+                <p className="text-white font-bold 2xl:text-xl text-lg">
+                  Rosélia Wolf
+                </p>
+                <p className="font-normal text-green-600 2xl:text-lg text-normal">
                   Tão tão distante
                 </p>
               </div>
             </div>
           </div>
-          <div className="bg-[#3F3E41] md:w-[500px] p-10 rounded-lg md:h-[300px] hidden md:block">
-            <p className="font-normal text-white text-xl">
-              &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua.&quot;
-            </p>
-            <div className="mt-4 flex items-center gap-4">
+          <div className="keen-slider__slide bg-[#3F3E41] md:w-[500px] p-10 rounded-lg md:h-[300px] hidden md:block">
+            <div className="h-1/2">
+              <p className="font-normal text-white 2xl:text-xl text-lg">
+                &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.&quot;
+              </p>
+            </div>
+            <div className="mt-4 w-full flex items-end justify-start gap-4 h-1/2">
               <img
                 src="/images/people_2.svg"
                 alt=""
-                className="object-contain w-16"
+                className="object-contain 2xl:w-24 w-16"
               />
-              <div>
-                <p className="text-white font-bold text-lg">Erê Dias</p>
-                <p className="font-light text-green-600 text-lg">Arapiraca</p>
+              <div className="flex flex-col 2xl:h-full pb-2 2xl:pb-0 items-start justify-center">
+                <p className="text-white font-bold 2xl:text-xl text-lg">
+                  Erê Dias
+                </p>
+                <p className="font-normal text-green-600 2xl:text-lg text-normal">
+                  Arapiraca
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="keen-slider__slide bg-[#3F3E41] flex flex-col items-center justify-center md:w-[500px] p-10 rounded-lg md:h-[300px]">
+            <div className="h-1/2">
+              <p className="font-normal text-white 2xl:text-xl text-lg">
+                &quot;But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system&quot;
+              </p>
+            </div>
+            <div className="mt-4 pt-32 w-full h-1/2 flex items-end justify-start gap-4">
+              <img
+                src="/images/people_3.svg"
+                alt=""
+                className="object-contain 2xl:w-24 w-16"
+              />
+              <div className="flex flex-col items-start justify-start 2xl:mb-5 mb-2">
+                <p className="text-white font-bold 2xl:text-xl text-lg">
+                  Josias Maestro
+                </p>
+                <p className="font-normal text-green-600 2xl:text-lg text-normal">
+                  Far far Away
+                </p>
               </div>
             </div>
           </div>
