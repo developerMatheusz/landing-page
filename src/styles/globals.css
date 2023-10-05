@@ -12,3 +12,11 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+seletor {
+  box-shadow: h-shadow v-shadow blur spread color inset;
+}
+
+.drop-shadow {
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+}

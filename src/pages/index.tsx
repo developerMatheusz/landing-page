@@ -6,6 +6,7 @@ import "keen-slider/keen-slider.min.css";
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
   let perView;
   let spacing;
@@ -18,6 +19,10 @@ export default function Index() {
   }
 
   console.log(currentSlide);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
 
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
@@ -85,12 +90,62 @@ export default function Index() {
               Baixar Grátis
             </button>
           </div>
-          <div className="flex items-center justify-center md:hidden cursor-pointer">
-            <img
-              src="/images/hamburguer.svg"
-              alt=""
-              className="object-cover mr-6"
-            />
+          <div className="relative">
+            <div
+              className="flex items-center justify-center md:hidden cursor-pointer"
+              onClick={toggleModal}
+            >
+              <img
+                src="/images/hamburguer.svg"
+                alt=""
+                className="object-cover mr-6"
+              />
+            </div>
+            {modalOpen && (
+              <div className="fixed top-0 left-0 w-full h-full bg-[#343236] z-50 flex flex-col items-center">
+                <div
+                  className="w-full flex items-end justify-end pr-5 pt-5 text-white cursor-pointer"
+                  onClick={toggleModal}
+                >
+                  <img src="/images/x.svg" alt="" />
+                </div>
+                <div className="w-full flex items-center justify-center mt-8">
+                  <img src="/images/logo.svg" alt="" />
+                </div>
+                <div className="w-full flex flex-col gap-8 items-center justify-center mt-14">
+                  <Link
+                    href="/"
+                    className="font-light text-xl text-white hover:text-gray-300"
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    href="/"
+                    className="font-light text-xl text-white hover:text-gray-300"
+                  >
+                    Features
+                  </Link>
+                  <Link
+                    href="/"
+                    className="font-light text-xl text-white hover:text-gray-300"
+                  >
+                    Blog
+                  </Link>
+                  <Link
+                    href="/"
+                    className="font-light text-xl text-white hover:text-gray-300"
+                  >
+                    Contato
+                  </Link>
+                  <button
+                    className="bg-[#42BD3D] text-white 2xl:px-8 2xl:py-3 px-8 py-3 rounded-md font-normal text-lg 2xl:text-xl mt-5 drop-shadow"
+                    style={{ whiteSpace: "nowrap" }}
+                  >
+                    Baixar Grátis
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
         <div className="w-full flex-col md:flex-row flex items-center pb-10">
@@ -160,7 +215,7 @@ export default function Index() {
             />
           </div>
         </div>
-        <div className="w-full flex items-center justify-center relative z-50 -mb-10">
+        <div className="w-full flex items-center justify-center relative z-40 -mb-10">
           <img
             src="/images/button.svg"
             alt=""
@@ -221,7 +276,7 @@ export default function Index() {
           <img
             src="/images/rounded_right.svg"
             alt=""
-            className="md:block hidden -mb-20 z-50"
+            className="md:block hidden -mb-20 z-40"
           />
         </div>
       </div>
