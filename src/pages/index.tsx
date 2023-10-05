@@ -9,10 +9,11 @@ export default function Index() {
   const [loaded, setLoaded] = useState(false);
   let perView;
   let spacing;
+  let isMdScreen;
 
   if (typeof window !== "undefined") {
-    const isMdScreen = window.innerWidth < 1000;
-    perView = isMdScreen ? 0.9 : 2.9;
+    isMdScreen = window.innerWidth < 1000;
+    perView = isMdScreen ? 1.3 : 2.9;
     spacing = isMdScreen ? 10 : 35;
   }
 
@@ -291,7 +292,7 @@ export default function Index() {
                 />
               </div>
             </div>
-            <div className="md:w-1/2 w-full h-full md:pl-10 py-10">
+            <div className="md:w-1/2 w-full h-full flex flex-col items-center justify-center md:pl-10 py-10">
               <div className="w-full flex flex-col md:flex-row items-center md:justify-start justify-center">
                 <div className="mr-4 h-20 w-1 bg-green-600 rounded-full hidden md:block 2xl:h-24" />
                 <h1 className="text-3xl 2xl:text-5xl font-bold text-white text-center md:text-left">
@@ -343,7 +344,7 @@ export default function Index() {
             <div className="md:w-1/2 w-full h-full flex items-center justify-center text-center p-10">
               <div className="flex items-center justify-center w-full h-full">
                 <img
-                  src="/images/group_phone_3.svg"
+                  src="/images/group_phone_4.svg"
                   alt=""
                   className="w-full h-full object-contain"
                 />
@@ -375,13 +376,13 @@ export default function Index() {
             <div className="md:w-1/2 w-full h-full flex items-center justify-center text-center p-10">
               <div className="flex items-center justify-center w-full h-full">
                 <img
-                  src="/images/group_phone_4.svg"
+                  src="/images/group_phone_5.svg"
                   alt=""
                   className="w-full h-full object-contain"
                 />
               </div>
             </div>
-            <div className="md:w-1/2 w-full h-full md:pl-10 py-10">
+            <div className="md:w-1/2 w-full h-full flex flex-col items-center justify-center md:pl-10 py-10">
               <div className="w-full flex flex-col md:flex-row items-center md:justify-start justify-center">
                 <div className="mr-4 h-20 w-1 bg-green-600 rounded-full hidden md:block 2xl:h-24" />
                 <h1 className="text-3xl 2xl:text-5xl font-bold text-white text-center md:text-left">
@@ -495,77 +496,14 @@ export default function Index() {
           className="flex items-center justify-center w-full mt-10 md:mt-20 keen-slider"
           ref={sliderRef}
         >
-          <div className="keen-slider__slide number-slide1 bg-[#3F3E41] flex flex-col items-center justify-center md:w-[500px] p-10 rounded-lg md:h-[300px]">
-            <div className="h-1/2">
-              <p className="font-normal text-white 2xl:text-xl text-lg">
-                &quot;Um app projetado para todos que desejam manter seus jogos
-                organizados, guardando os resultados do seu time e mantendo uma
-                agenda organizada dos próximos jogos.&quot;
-              </p>
-            </div>
-            <div className="2xl:mt-4 mt-6 pt-32 w-full h-1/2 flex items-end justify-start gap-4">
-              <img
-                src="/images/people_1.svg"
-                alt=""
-                className="object-contain 2xl:w-24 w-16"
-              />
-              <div className="flex flex-col items-start justify-start 2xl:mb-5 mb-2">
-                <p className="text-white font-bold 2xl:text-xl text-lg">
-                  Rosélia Wolf
-                </p>
-                <p className="font-normal text-green-600 2xl:text-lg text-normal">
-                  Tão tão distante
-                </p>
-              </div>
-            </div>
+          <div className="keen-slider__slide">
+            <img src="/images/card1.svg" alt="" />
           </div>
-          <div className="keen-slider__slide bg-[#3F3E41] md:w-[500px] p-10 rounded-lg md:h-[300px] hidden md:block">
-            <div className="h-1/2">
-              <p className="font-normal text-white 2xl:text-xl text-lg">
-                &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.&quot;
-              </p>
-            </div>
-            <div className="mt-4 w-full flex items-end justify-start gap-4 h-1/2">
-              <img
-                src="/images/people_2.svg"
-                alt=""
-                className="object-contain 2xl:w-24 w-16"
-              />
-              <div className="flex flex-col 2xl:h-full pb-2 2xl:pb-0 items-start justify-center">
-                <p className="text-white font-bold 2xl:text-xl text-lg">
-                  Erê Dias
-                </p>
-                <p className="font-normal text-green-600 2xl:text-lg text-normal">
-                  Arapiraca
-                </p>
-              </div>
-            </div>
+          <div className="keen-slider__slide">
+            <img src="/images/card2.svg" alt="" />
           </div>
-          <div className="keen-slider__slide bg-[#3F3E41] flex flex-col items-center justify-center md:w-[500px] p-10 rounded-lg md:h-[300px]">
-            <div className="h-1/2">
-              <p className="font-normal text-white 2xl:text-xl text-lg">
-                &quot;But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and I will give
-                you a complete account of the system&quot;
-              </p>
-            </div>
-            <div className="mt-4 pt-32 w-full h-1/2 flex items-end justify-start gap-4">
-              <img
-                src="/images/people_3.svg"
-                alt=""
-                className="object-contain 2xl:w-24 w-16"
-              />
-              <div className="flex flex-col items-start justify-start 2xl:mb-5 mb-2">
-                <p className="text-white font-bold 2xl:text-xl text-lg">
-                  Josias Maestro
-                </p>
-                <p className="font-normal text-green-600 2xl:text-lg text-normal">
-                  Far far Away
-                </p>
-              </div>
-            </div>
+          <div className="keen-slider__slide">
+            <img src="/images/card3.svg" alt="" />
           </div>
         </div>
       </div>
@@ -586,7 +524,11 @@ export default function Index() {
         </Link>
       </div>
       <div className="flex w-full bg-[#343236]">
-        <img src="/images/bottom_cover.svg" alt="" className="md:pt-24 pt-10" />
+        <img
+          src="/images/bottom_cover.svg"
+          alt=""
+          className="md:pt-24 pt-10 w-full"
+        />
       </div>
       <div className="flex items-center w-full flex-col justify-center md:mt-24 pt-10 bg-white">
         <h1 className="md:text-6xl text-3xl text-[#343236] font-bold mb-10 md:mb-24">
