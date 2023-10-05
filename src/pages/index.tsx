@@ -193,7 +193,7 @@ export default function Index() {
                   />
                 </Link>
                 <Link
-                  href="https://play.google.com/store/apps/details?id=com.jogueirosfc.app"
+                  href="https://apps.apple.com/br/app/jogueiros-fc/id1436662118"
                   target="_blank"
                 >
                   <img
@@ -590,7 +590,7 @@ export default function Index() {
           />
         </Link>
         <Link
-          href="https://play.google.com/store/apps/details?id=com.jogueirosfc.app"
+          href="https://apps.apple.com/br/app/jogueiros-fc/id1436662118"
           target="_blank"
         >
           <img
