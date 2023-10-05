@@ -83,12 +83,17 @@ export default function Index() {
             </div>
           </div>
           <div className="mr-6 2xl:mr-8 md:block hidden">
-            <button
-              className="bg-[#343236] text-white 2xl:px-8 2xl:py-3 px-6 py-3 shadow-xl rounded-lg font-normal text-lg 2xl:text-xl"
-              style={{ whiteSpace: "nowrap" }}
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.jogueirosfc.app"
+              target="_blank"
             >
-              Baixar Grátis
-            </button>
+              <button
+                className="bg-[#343236] text-white 2xl:px-8 2xl:py-3 px-6 py-3 shadow-xl rounded-lg font-normal text-lg 2xl:text-xl"
+                style={{ whiteSpace: "nowrap" }}
+              >
+                Baixar Grátis
+              </button>
+            </Link>
           </div>
           <div className="relative">
             <div
@@ -137,12 +142,17 @@ export default function Index() {
                   >
                     Contato
                   </Link>
-                  <button
-                    className="bg-[#42BD3D] text-white 2xl:px-8 2xl:py-3 px-8 py-3 rounded-md font-normal text-lg 2xl:text-xl mt-5 drop-shadow"
-                    style={{ whiteSpace: "nowrap" }}
+                  <Link
+                    href="https://play.google.com/store/apps/details?id=com.jogueirosfc.app"
+                    target="_blank"
                   >
-                    Baixar Grátis
-                  </button>
+                    <button
+                      className="bg-[#42BD3D] text-white 2xl:px-8 2xl:py-3 px-8 py-3 rounded-md font-normal text-lg 2xl:text-xl mt-5 drop-shadow"
+                      style={{ whiteSpace: "nowrap" }}
+                    >
+                      Baixar Grátis
+                    </button>
+                  </Link>
                 </div>
               </div>
             )}
@@ -172,14 +182,20 @@ export default function Index() {
             </div>
             <div className="pl-5 md:pl-0 w-full flex flex-col items-start">
               <div className="flex items-center justify-center md:justify-start mt-6 gap-4">
-                <Link href="https://play.google.com/store" target="_blank">
+                <Link
+                  href="https://play.google.com/store/apps/details?id=com.jogueirosfc.app"
+                  target="_blank"
+                >
                   <img
                     src="/images/googleplay.png"
                     alt=""
                     className="w-72 object-contain"
                   />
                 </Link>
-                <Link href="https://play.google.com/store" target="_blank">
+                <Link
+                  href="https://play.google.com/store/apps/details?id=com.jogueirosfc.app"
+                  target="_blank"
+                >
                   <img
                     src="/images/appstore.png"
                     alt=""
@@ -563,14 +579,20 @@ export default function Index() {
         </div>
       </div>
       <div className="flex items-center w-full h-full gap-4 bg-[#343236] justify-center md:justify-end md:pr-32">
-        <Link href="https://play.google.com/store" target="_blank">
+        <Link
+          href="https://play.google.com/store/apps/details?id=com.jogueirosfc.app"
+          target="_blank"
+        >
           <img
             src="/images/googleplay.png"
             alt=""
             className="w-72 object-contain"
           />
         </Link>
-        <Link href="https://play.google.com/store" target="_blank">
+        <Link
+          href="https://play.google.com/store/apps/details?id=com.jogueirosfc.app"
+          target="_blank"
+        >
           <img
             src="/images/appstore.png"
             alt=""
