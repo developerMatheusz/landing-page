@@ -43,7 +43,7 @@ export default function Index() {
 
   return (
     <div className="w-full h-full flex flex-col">
-      <div className="w-full h-full custom-background">
+      <div className="w-full h-full custom-background" id="home">
         <div className="w-full flex items-center justify-between bg-[#343236] md:bg-transparent">
           <div className="w-full flex items-center text-white gap-8">
             <div className="p-3 pl-4">
@@ -57,25 +57,25 @@ export default function Index() {
             <div className="h-16 border-r-2 md:block hidden" />
             <div className="md:block hidden flex items-center gap-11 z-50">
               <Link
-                href="/"
+                href="#home"
                 className="font-light pr-14 2xl:text-xl hover:text-gray-300"
               >
                 Home
               </Link>
               <Link
-                href="/"
+                href="#features"
                 className="font-light pr-14 2xl:text-xl hover:text-gray-300"
               >
                 Features
               </Link>
               <Link
-                href="/"
+                href="#blog"
                 className="font-light pr-14 2xl:text-xl hover:text-gray-300"
               >
                 Blog
               </Link>
               <Link
-                href="/"
+                href="#contact"
                 className="font-light pr-14 2xl:text-xl hover:text-gray-300"
               >
                 Contato
@@ -119,25 +119,25 @@ export default function Index() {
                 </div>
                 <div className="w-full flex flex-col gap-8 items-center justify-center mt-14">
                   <Link
-                    href="/"
+                    href="#home"
                     className="font-light text-xl text-white hover:text-gray-300"
                   >
                     Home
                   </Link>
                   <Link
-                    href="/"
+                    href="#features"
                     className="font-light text-xl text-white hover:text-gray-300"
                   >
                     Features
                   </Link>
                   <Link
-                    href="/"
+                    href="#blog"
                     className="font-light text-xl text-white hover:text-gray-300"
                   >
                     Blog
                   </Link>
                   <Link
-                    href="/"
+                    href="#contact"
                     className="font-light text-xl text-white hover:text-gray-300"
                   >
                     Contato
@@ -247,7 +247,10 @@ export default function Index() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="md:w-1/2 pl-8 pb-10 md:pb-0 w-full md:h-screen flex flex-col relative">
+        <div
+          className="md:w-1/2 pl-8 pb-10 md:pb-0 w-full md:h-screen flex flex-col relative"
+          id="features"
+        >
           <div className="h-full w-full md:mt-0 pr-4 pt-5 2xl:pt-14">
             <h1 className="text-green-600 md:text-2xl 2xl:text-3xl text-2xl font-normal">
               Junte-se a nós
@@ -607,7 +610,10 @@ export default function Index() {
           className="md:pt-24 pt-10 w-full"
         />
       </div>
-      <div className="flex items-center w-full flex-col justify-center md:mt-24 pt-10 bg-white">
+      <div
+        className="flex items-center w-full flex-col justify-center md:mt-24 pt-10 bg-white"
+        id="blog"
+      >
         <h1 className="md:text-6xl text-3xl text-[#343236] font-bold mb-10 md:mb-24">
           BLOGS E ARTIGOS
         </h1>
@@ -623,7 +629,10 @@ export default function Index() {
           </Link>
         </div>
       </div>
-      <div className="w-full flex items-center justify-between px-8 md:px-20 my-8 md:my-24">
+      <div
+        className="w-full flex items-center justify-between px-8 md:px-20 my-8 md:my-24"
+        id="contact"
+      >
         <div className="bg-[#343236] flex items-center justify-between w-full rounded-2xl">
           <div className="p-8 hidden md:block">
             <img src="/images/logo.svg" alt="" />
